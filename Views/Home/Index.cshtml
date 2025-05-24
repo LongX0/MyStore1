@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Welcome to MyStore";
+}
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4 mb-3">Welcome to <strong>MyStore</strong>!</h1>
+        <p class="lead">Your one-stop shop for all the latest products and great deals.</p>
+    </div>
+
+    <div class="text-center mt-5">
+        <a asp-controller="Products" asp-action="Index" class="btn btn-primary btn-lg me-2">
+            🛍 View Products
+        </a>
+        <a asp-controller="Cart" asp-action="Index" class="btn btn-outline-secondary btn-lg">
+            🛒 Go to Cart
+        </a>
+    </div>
+
+    <div class="row text-center mt-5">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Fast Shipping</h5>
+                    <p class="card-text">Get your products delivered within 2-3 business days.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mt-4 mt-md-0">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Secure Payments</h5>
+                    <p class="card-text">We offer 100% secure payment options via trusted gateways.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mt-4 mt-md-0">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">24/7 Support</h5>
+                    <p class="card-text">Our team is here to help you anytime, day or night.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

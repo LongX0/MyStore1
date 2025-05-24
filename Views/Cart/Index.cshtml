@@ -1,0 +1,40 @@
+﻿@model List<MyStore.Models.CartItem>
+
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<h2>Cart</h2>
+
+@if (!Model.Any())
+{
+    <p>
+        Cart is empty.
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Product?.Title</td>
+                    <td>@item.Product?.Price</td>
+                    <td>@item.Quantity</td>
+                    <td>
+                        <a asp-action="RemoveFromCart" asp-route-id="@item.ProductId" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
